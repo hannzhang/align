@@ -1,0 +1,16 @@
+Package: align
+Type: Package
+Title: Sequence Alignment Visualization
+Version: 0.1.0
+Author@R: person("Helen", "Zhang", email = "helenzhang0814@outlook.com",
+                  role = c("aut", "cre"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: This package enhances the sequence alignment workflow of 
+    Biostrings package by providing alignment visualization using ggplot.
+Depends: R (>= 3.1.0)
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports:
+    ggplot2,
+    Biostrings
