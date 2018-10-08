@@ -1,4 +1,10 @@
-
+##################################################
+## Purpose: sequence alignment visualization
+## Author:  Helen Zhang
+## Date:    2018/10/08
+## Version: 0.1.0
+## Bugs:    not known yet
+##################################################
 
 #' Get color of the character
 #'
@@ -39,6 +45,7 @@ getColor <- function(c) {
     return ("#287c8eff")
   }
 
+  # black for others
   return ("black")
 
 }
@@ -55,22 +62,21 @@ getColor <- function(c) {
 #' @importFrom ggplot2 ggplot geom_point xlim ylim annotate geom_segment aes
 draw_compare <- function (x, y)
 {
-  n = nchar(x)
+  n <- nchar(x)
 
   df <- data.frame()
-  sp = ggplot(df) + geom_point() + xlim(0, n + 1) + ylim(-1, 1)
+  # create a empty plot
+  sp <- ggplot(df) + geom_point() + xlim(0, n + 1) + ylim(-1, 1)
 
-  #t = -1
-
-  eq = c()
-  for (i in 1:n)
+  # eq record positions matched
+  eq <- c()
+  for (i in seq(1, n))
   {
-    chrx = substr(x, i, i)
-
-    chry = substr(y, i, i)
-
+    chrx <- substr(x, i, i)
+    chry <- substr(y, i, i)
 
     sp <-
+      # draw the character in first string
       sp +  annotate(
         geom = "text",
         x = i,
@@ -80,6 +86,7 @@ draw_compare <- function (x, y)
         size = 10
       ) +
 
+      # draw the character in second string
       annotate(
         geom = "text",
         x = i,
@@ -89,13 +96,16 @@ draw_compare <- function (x, y)
         size = 10
       )
 
+    # add the matched position
     if (chrx == chry)
     {
-      eq = c(eq, i)
+      eq <- c(eq, i)
     }
 
   }
 
+  # if has matched position
+  # draw vertical lines to connect them
   if (length(eq) != 0)
   {
     sp <-
@@ -124,11 +134,14 @@ draw_compare <- function (x, y)
 #' @importFrom Biostrings pairwiseAlignment pattern subject
 align <- function(x, y)
 {
-  res = pairwiseAlignment(pattern = c(x), subject = y)
-  resx = pattern(res)
-  resy = subject(res)
-  resx = as.character(resx)
-  resy = as.character(resy)
-  g = draw_compare(resx, resy)
+  # align the two string
+  res <- pairwiseAlignment(pattern = c(x), subject = y)
+  # get characters of the matched result
+  resx <- pattern(res)
+  resy <- subject(res)
+  resx <- as.character(resx)
+  resy <- as.character(resy)
+  # draw the matched alignment
+  g <- draw_compare(resx, resy)
   return (g)
 }

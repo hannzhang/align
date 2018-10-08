@@ -1,3 +1,10 @@
+##################################################
+## Purpose: test file for this package
+## Author:  Helen Zhang
+## Date:    2018/10/08
+## Version: 0.1.0
+## Bugs:    not known yet
+##################################################
 
 test_that("getColor return correct color", {
   expect_equal(getColor("A"), "red")
@@ -11,8 +18,12 @@ test_that("getColor return correct color", {
 
 test_that("draw_compare produce ggplot", {
   expect_is(draw_compare('ACTCGCAATATGVTAGGVVA', "ACTT----TATGCTATGCGC"), "ggplot")
+  expect_is(draw_compare("AG-T", "AGCT"), "ggplot")
+  expect_is(draw_compare("GAGCGT", "GA-C-T"), "ggplot")
 })
 
 test_that("align produce ggplot", {
   expect_is(align('ACTCGCAATATGVTAGGVVA', "ACTTTATGCTATGCGC"), "ggplot")
+  expect_is(align("ACT", "AGCT"), "ggplot")
+  expect_is(align("GAGCGT", "GACT"), "ggplot")
 })
