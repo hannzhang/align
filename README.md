@@ -6,8 +6,8 @@ Biostrings package by providing alignment visualization using ggplot.
 
 ## Dependency
 
-- Biostrings
-- ggplot2
+- Biostrings https://bioconductor.org/packages/release/bioc/html/Biostrings.html
+- ggplot2 https://cran.r-project.org/web/packages/ggplot2/index.html
 
 
 ## Installation
@@ -19,8 +19,6 @@ install_github("hannzhang/align")
 
 ## Example
 ```{R}
-library(Biostrings)
-library(ggplot2)
 library(align)
 align("ACTCGCAATATGVTAGGVVAG", "ACTTTATGCTATGCGC")
 ```
