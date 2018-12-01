@@ -133,6 +133,15 @@ draw_compare <- function (x, y)
 #' @importFrom Biostrings pairwiseAlignment pattern subject
 align <- function(x, y)
 {
+  if(!is.character(x))
+  {
+    stop("the first argument is not string");
+  }
+
+  if(!is.character(y))
+  {
+    stop("the second argument is not string");
+  }
   # align the two string
   res <- pairwiseAlignment(pattern = c(x), subject = y)
   # get characters of the matched result
