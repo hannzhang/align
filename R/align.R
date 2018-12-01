@@ -49,7 +49,7 @@ getColor <- function(c) {
 
 }
 
-#' Draw the plot of the two mathed string
+#' Draw the plot of the two matched string
 #'
 #' @param x A string
 #' @param y A string
