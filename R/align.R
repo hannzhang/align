@@ -10,10 +10,6 @@
 #'
 #' @param c A character
 #' @return the color string of the character
-#' @examples
-#' getColor("A")
-#' getColor("G")
-#' getColor("C")
 getColor <- function(c) {
   if (c == "A")
   {
@@ -49,9 +45,6 @@ getColor <- function(c) {
 #' @param x A string
 #' @param y A string
 #' @return ggplot of the matched string
-#' @examples
-#' draw_compare("AG-T", "AGCT")
-#' draw_compare("GAGCGT", "GA-C-T")
 #' @importFrom ggplot2 ggplot geom_point xlim ylim annotate geom_segment aes labs
 draw_compare <- function (x, y)
 {

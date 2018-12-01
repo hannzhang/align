@@ -15,8 +15,3 @@ the color string of the character
 \description{
 Get color of the character
 }
-\examples{
-getColor("A")
-getColor("G")
-getColor("C")
-}
