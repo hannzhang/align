@@ -27,3 +27,7 @@ test_that("align produce ggplot", {
   expect_is(align("ACT", "AGCT"), "ggplot")
   expect_is(align("GAGCGT", "GACT"), "ggplot")
 })
+
+test_that("align with invalid argument type", {
+  expect_error(align(123, "ATG"));
+})
