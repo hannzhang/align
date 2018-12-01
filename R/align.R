@@ -18,25 +18,21 @@ getColor <- function(c) {
   if (c == "A")
   {
     return ("red")
-
   }
 
   if (c == "G")
   {
     return ("green")
-
   }
 
   if (c == "C")
   {
     return ("blue")
-
   }
 
   if (c == "T")
   {
     return ("#608899")
-
   }
 
   if (c == "U")
@@ -46,7 +42,6 @@ getColor <- function(c) {
 
   # black for others
   return ("black")
-
 }
 
 #' Draw the plot of the two matched string
@@ -61,7 +56,6 @@ getColor <- function(c) {
 draw_compare <- function (x, y)
 {
   n <- nchar(x)
-
   df <- data.frame()
   # create a empty plot
   sp <- ggplot(df) + geom_point() + xlim(0, n + 1) + ylim(-1, 1) +
@@ -100,7 +94,6 @@ draw_compare <- function (x, y)
     {
       eq <- c(eq, i)
     }
-
   }
 
   # if has matched position
@@ -115,7 +108,6 @@ draw_compare <- function (x, y)
         yend = 0.14
       ))
   }
-
   return (sp)
 }
 
