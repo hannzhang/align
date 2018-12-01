@@ -14,7 +14,6 @@
 #' getColor("A")
 #' getColor("G")
 #' getColor("C")
-#' @export
 getColor <- function(c) {
   if (c == "A")
   {
@@ -58,15 +57,15 @@ getColor <- function(c) {
 #' @examples
 #' draw_compare("AG-T", "AGCT")
 #' draw_compare("GAGCGT", "GA-C-T")
-#' @export
-#' @importFrom ggplot2 ggplot geom_point xlim ylim annotate geom_segment aes
+#' @importFrom ggplot2 ggplot geom_point xlim ylim annotate geom_segment aes labs
 draw_compare <- function (x, y)
 {
   n <- nchar(x)
 
   df <- data.frame()
   # create a empty plot
-  sp <- ggplot(df) + geom_point() + xlim(0, n + 1) + ylim(-1, 1)
+  sp <- ggplot(df) + geom_point() + xlim(0, n + 1) + ylim(-1, 1) +
+        labs(x = "position of nucleotide", y = "")
 
   # eq record positions matched
   eq <- c()

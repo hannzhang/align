@@ -16,4 +16,4 @@ Imports:
 URL: http://github.com/hannzhang/align
 BugReports: http://github.com/hannzhang/align/issues
 Suggests: testthat
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
