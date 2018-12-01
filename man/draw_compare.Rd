@@ -2,7 +2,7 @@
 % Please edit documentation in R/align.R
 \name{draw_compare}
 \alias{draw_compare}
-\title{Draw the plot of the two mathed string}
+\title{Draw the plot of the two matched string}
 \usage{
 draw_compare(x, y)
 }
@@ -15,9 +15,5 @@ draw_compare(x, y)
 ggplot of the matched string
 }
 \description{
-Draw the plot of the two mathed string
-}
-\examples{
-draw_compare("AG-T", "AGCT")
-draw_compare("GAGCGT", "GA-C-T")
+Draw the plot of the two matched string
 }
