@@ -138,3 +138,5 @@ align <- function(x, y)
   g <- draw_compare(resx, resy)
   return (g)
 }
+
+# [END]

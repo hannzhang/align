@@ -15,5 +15,9 @@ Imports:
     Biostrings
 URL: http://github.com/hannzhang/align
 BugReports: http://github.com/hannzhang/align/issues
-Suggests: testthat
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
 RoxygenNote: 6.1.1
+VignetteBuilder: knitr
