@@ -47,3 +47,6 @@ getColor("C")
 getColor("G")
 getColor("T")
 ````
+## Sample visualizations
+
+![alt text](http://steipe.biochemistry.utoronto.ca/abc/students/images/b/bc/Plot.png){width=70%}
